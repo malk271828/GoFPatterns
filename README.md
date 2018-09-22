@@ -25,6 +25,7 @@ The readers of this article should learn the following contents in advance:
 
 ## Typographical conventions
 The following typographical conventions are used in this article:
+
 |Symbolic representation|Description|
 |:----|:-----|
 |[URL link]|Reference to ensure English correctness in both grammatical and idiomatic usage.|
