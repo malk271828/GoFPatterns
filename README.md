@@ -1,5 +1,5 @@
 ## Introduction
-This repository include a basic implementation and explain of classic GoF (abbreviation of Gang of Four) design patterns. Although GoF design patterns are frequently appeared in designing softwares or architectures, they include a lot of controversial points from a view of its applicability. For example, one of these patterns is too fundamental to define its concept as a versatile pattern, and another one can be used only for quite specific problems.
+This repository include a basic implementation and explanation of classic GoF (abbreviation of Gang of Four) design patterns. Although GoF design patterns are frequently appeared in designing software or architectures, they include a lot of controversial points from a view of its applicability. For example, one of these patterns is too fundamental to define its concept as a versatile pattern, and another one can be used only for quite specific problems.
 
 Common advantages and disadvantages of applying design patterns to software development are listed in [this article](https://www.linkedin.com/pulse/benefits-design-patterns-application-development-shibaji-debnath)
 

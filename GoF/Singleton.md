@@ -2,10 +2,10 @@
 
 |item|Desc|
 |:---------|:----------|
-|Objective|assure an object of uniqueness|
+|Objective|assure uniqueness of an object|
 |Simplicity|★★★★★|
 |Frequency|★★★★★|
-|Participants|Singleton,CLient|
+|Participants|Singleton,Client|
 |Embodiment||
 |Refs|1. [wiki](https://en.wikipedia.org/wiki/Singleton_pattern)<br>2. [sourceMaking](https://sourcemaking.com/design_patterns/singleton)<br>3. [defactory](http://www.dofactory.com/javascript/singleton-design-pattern)|
 
