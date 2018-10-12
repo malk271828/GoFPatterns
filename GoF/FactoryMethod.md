@@ -25,5 +25,6 @@ Calling ```tf.get_variable``` function with several specifying parameters easily
 ```python
 my_variable = tf.get_variable("my_variable", [1, 2, 3])
 
-my_int_variable = tf.get_variable("my_int_variable", [1, 2, 3], dtype=tf.int32, initializer=tf.zeros_initializer)
+my_int_variable = tf.get_variable("my_int_variable", [1, 2, 3], dtype=tf.int32,
+                                  initializer=tf.zeros_initializer)
 ```
