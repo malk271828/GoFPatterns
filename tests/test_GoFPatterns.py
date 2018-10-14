@@ -29,7 +29,10 @@ def test_Factory():
         return x+1
 
     f = Factory()
-    f.register("createX", increment, x=1)
-    assert f.createX()==2
+    methodName = "methodName"
+    assert methodName not in f.__dict__.keys()
+    f.registerConstructor(methodName, increment, x=1)
+    assert getattr(f,methodName)()==2
+    assert methodName in f.__dict__.keys()
 
     return
