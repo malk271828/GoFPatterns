@@ -33,7 +33,8 @@ The following typographical conventions are used in this article:
 
 # Creational patterns
 
-[Singleton](GoF/Singleton.md)
-[FactoryMethod](GoF/FactoryMethod.md)
+*  [Singleton](GoF/Singleton.md)
+*  [FactoryMethod](GoF/FactoryMethod.md)
+*  [Builder](GoF/Builder.md)
 
 [^1]: Reddy, Martin. API Design for C++. Elsevier, 2011.

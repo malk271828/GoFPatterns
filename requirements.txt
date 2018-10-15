@@ -1,1 +1,2 @@
 pytest==3.4.0
+pyfunctor==0.1.3
