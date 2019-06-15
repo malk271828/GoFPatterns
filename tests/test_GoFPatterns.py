@@ -57,7 +57,7 @@ def test_AbstractFactory():
     af.registerConstructor(methodName, A, 2)
     af.registerConstructor(methodName, B, 3)
     assert methodName in af.__dict__.keys()
-    a, b = [ constructor() for constructor in getattr(af,methodName) ]
+    a, b = af.createProductFamily(methodName)
     assert a.add(b)==5
 
     return

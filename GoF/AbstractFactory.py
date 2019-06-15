@@ -10,14 +10,12 @@ class AbstractFactory:
         pass
 
     def registerConstructor(self, methodName, constructor, *args, **kargs):
-        """
-        @fn     public method registerConstructor
-        @brief  register a constructor for lazy evaluation
-                If the same method has been already registered,
-                additional constructor will be added into a constructor family.
-        @param  methodName : identifier for virtual constructor
-        @param  constructor : a function or constructor to create instance.
-        @return N/A
+        """ register a constructor for lazy evaluation
+            If the same method has been already registered,
+            additional constructor will be added into a constructor family.
+        :param methodName: identifier for virtual constructor
+        :param constructor: a function or constructor to create instance.
+        :return: N/A
         """
         if hasattr(self, methodName)==True:
             functorList = [getattr(self, methodName)]
@@ -36,3 +34,6 @@ class AbstractFactory:
         @return N/A
         """
         delattr(self, methodName)
+
+    def createProductFamily(self, methodName):
+        return [ constructor() for constructor in getattr(self, methodName) ]
