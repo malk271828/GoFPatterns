@@ -9,4 +9,4 @@ import pytest
 sys.dont_write_bytecode = True
 
 # run pytest
-pytest.main(["-v", "GoF/", "tests/"])
+pytest.main(["--capture=no", "-v", "GoF/", "tests/"])
