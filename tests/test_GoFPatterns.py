@@ -52,15 +52,15 @@ def test_AbstractFactory(common_setup):
     af = AbstractFactory()
     methodName = "methodName"
     assert methodName not in af.__dict__.keys()
-    af.registerConstructor(methodName, A, 2)
-    af.registerConstructor(methodName, B, 3)
+    af.registerConstructor(methodName, A, x=2)
+    af.registerConstructor(methodName, B, x=3)
     assert methodName in af.__dict__.keys()
     a, b = af.createProductFamily(methodName)
     assert a.add(b) == 5
 
     methodName2 = "methodName2"
-    af.registerConstructor(methodName2, increment, 2)
-    af.registerConstructor(methodName2, increment, 3)
+    af.registerConstructor(methodName2, increment, x=2)
+    af.registerConstructor(methodName2, increment, x=3)
     x = af.createProductFamily(methodName2)
     assert x == [2+1, 3+1]
 
