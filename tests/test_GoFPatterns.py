@@ -13,8 +13,8 @@ from GoF.AbstractFactory import *
 
 @pytest.fixture
 def common_setup(scope='class', autouse=True):
-    def increment(x):
-        return x+1
+    def increment(value):
+        return value+1
     class A:
         def __init__(self, x):
             self.x = x

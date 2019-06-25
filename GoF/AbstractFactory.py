@@ -15,6 +15,8 @@ class AbstractFactory:
             additional constructor will be added into a constructor family.
         :param methodName: identifier for virtual constructor
         :param constructor: a function or constructor to create instance.
+        :param args: Argument parameters to pass to constructor.
+                     Keyword argument cannot be used here.
         :return: N/A
         """
         if hasattr(self, methodName)==True:
