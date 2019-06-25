@@ -25,7 +25,12 @@ def common_setup(scope='class', autouse=True):
             self.y = y
         def getY(self):
             return self.y
-    yield A, B, increment
+    class C:
+        def __init__(self, z):
+            self.z = z
+        def getZ(self):
+            return self.z
+    yield A, B, C, increment
 
 def test_Singleton(common_setup):
     class DummySingleton2(metaclass=Singleton):
@@ -37,7 +42,7 @@ def test_Singleton(common_setup):
     assert s1==s2
 
 def test_Factory(common_setup):
-    A, B, increment = common_setup
+    A, B, C, increment = common_setup
     f = Factory()
     methodName = "methodName"
     assert methodName not in f.__dict__.keys()
@@ -48,14 +53,15 @@ def test_Factory(common_setup):
     return
 
 def test_AbstractFactory(common_setup):
-    A, B, increment = common_setup
+    A, B, C, increment = common_setup
     af = AbstractFactory()
     methodName = "methodName"
     assert methodName not in af.__dict__.keys()
     af.registerConstructor(methodName, A, 2)
     af.registerConstructor(methodName, B, 3)
+    af.registerConstructor(methodName, C, 4)
     assert methodName in af.__dict__.keys()
-    a, b = af.createProductFamily(methodName)
+    a, b, c = af.createProductFamily(methodName)
     assert a.add(b) == 5
 
     methodName2 = "methodName2"
