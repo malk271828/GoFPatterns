@@ -18,13 +18,13 @@ class AbstractFactory:
         :return: N/A
         """
         if hasattr(self, methodName)==True:
-            functorList = [getattr(self, methodName)]
+            functorList = getattr(self, methodName)
             f = Functor(*args, **kargs) >> constructor
             functorList.append(f)
             setattr(self, methodName, functorList)
         else:
             f = Functor(*args, **kargs) >> constructor
-            setattr(self, methodName, f)
+            setattr(self, methodName, [f])
 
     def unregisterConstructor(self, methodName):
         """
